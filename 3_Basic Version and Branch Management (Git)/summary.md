@@ -9,6 +9,7 @@
   Salah satu git hosting service adalah Github, pada Github suatu repository dapat diatur menjadi public (dapat dilihat semua orang) atau private (hanya collaborator yang dapat melihatnya).
 
   Tahapan dalam Staging Area:
+
   Working Directory --git add--> Staging Area --git commit--> Repository
 
   Beberapa fungsi pada git:
@@ -33,11 +34,15 @@
   5. branch -a: untuk melihat semua branch baik di lokal maupun di repository (origin)
 
   Untuk melakukan perpindahan branch dapat menggunakan "checkout featureA" sedangkan untuk membuat branch baru dan berpindah ke branch baru tersebut dapat menggunakan "checkout -b featureA". 
-  
+
   Untuk melakukan merge antar branch dapat menggunakan "merge" yang memiliki 2 (dua) jenis yaitu:
   1. Fast Forward (FF)
+
      Membuat hasil merge menjadi oneline (satu garis).
+
      cth. merge --ff featureA 
   2. No Fast Forward (NFF). 
+
      Membuat hasil merge menjadi bercabang.
+     
      cth. merge --no-ff featureA
