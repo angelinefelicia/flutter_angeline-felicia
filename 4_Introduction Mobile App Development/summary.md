@@ -52,6 +52,7 @@ Mobile App Development merupakan suatu proses pengembangan aplikasi yang berjala
   3. Compiler dapat menjalankan program dengan cepat dikarenakan tidak membaca ulang kode. Sedangakn interpreter menjalankan program dengan lebih lambat dikarenakan harus membaca ulang keseluruhan kode.
 
 - Mobile App Development
+
   Merupakan proses pengembangan aplikasi untuk perangkat mobile. 
   - iOS
     - Berjalan pada sistem operasi iOS.
@@ -64,5 +65,5 @@ Mobile App Development merupakan suatu proses pengembangan aplikasi yang berjala
     - Bahasa pemrograman native: Java, Kotlin.
 
   Untuk membuat suatu software multi platform (dapat digunakan pada aplikasi mobile android/iOS ataupun web) dengan menggunakan Single Code Base dapat melalui tahapan berikut:
-  
+
   Bahasa pemrograman (Dart + Flutter) --> Compiler (Android/iOS SDK) --> Machine Code (.apk/.ipa) --> Output
