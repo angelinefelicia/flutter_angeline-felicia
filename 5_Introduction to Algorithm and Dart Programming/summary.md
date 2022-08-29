@@ -12,11 +12,11 @@
 
   Contoh:
 
+  ```
   void main(){
-
     print('Hello');
-
   }
+  ```
 
   Ket: 
   - print digunakan untuk menampilkan data ke layar.
