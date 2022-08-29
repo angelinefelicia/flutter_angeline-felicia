@@ -1,6 +1,6 @@
 - Fungsi lanjutan
-  - Anonymous Function: tidak memiliki nama, berfungsi sebagai data di parameter.
-
+  - Anonymous Function: tidak memiliki nama, berfungsi sebagai data di parameter. 
+  
     Contoh:
     ```
     // var hello merupakan variabel
@@ -98,7 +98,7 @@
        ```
 
        Penggunaan for in
-       
+
        Contoh:
        ```
        void main() async {
@@ -114,5 +114,4 @@
                 print(student[key]);
             }
        }
-       
-    
+       ```
