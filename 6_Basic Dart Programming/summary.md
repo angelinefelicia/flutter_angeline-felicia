@@ -1,5 +1,6 @@
 - Fungsi lanjutan
   - Anonymous Function: tidak memiliki nama, berfungsi sebagai data di parameter.
+
     Contoh:
     ```
     // var hello merupakan variabel
@@ -20,27 +21,30 @@
     ```
 
   - Arrow Function: dapat memiliki nama/tidak, berisi 1 data (dari proses maupun data statis), nilai return fungsi ini diambil dari data tersebut. 
+
     Contoh:
     ```
     var hello = () => print('hello');
     var jumlah = (int a, int b) => a+b;
     ```
 
-  - Async - Await
-    - Menjalankan beberapa proses secara asynchronous tanpa perlu menunggu proses lainnya selesai.
-    - Proses tersebut ditulis dalam bentuk fungsi.
-    - Await akan menunggu hingga proses async selesai. 
+- Async - Await
+  - Menjalankan beberapa proses secara asynchronous tanpa perlu menunggu proses lainnya selesai.
+  - Proses tersebut ditulis dalam bentuk fungsi.
+  - Await akan menunggu hingga proses async selesai. 
 
-  - Tipe data Future
-    - Berjalan secara asynchronous. 
-    - Data yang dapat ditunggu.
-    - Membawa data return dari fungsi async.
-    - Membuat suatu proses berjalannya fungsi dapat berdurasi. 
+- Tipe data Future
+  - Berjalan secara asynchronous. 
+  - Data yang dapat ditunggu.
+  - Membawa data return dari fungsi async.
+  - Membuat suatu proses berjalannya fungsi dapat berdurasi. 
 
-  - Collection (kumpulan data pada satu tempat)
-    Merupakan struktur data yang lebih canggih untuk menangani suatu masalah yang lebih kompleks, menyimpan kumpulan data/object lain pada satu tempat.
+- Collection (kumpulan data pada satu tempat)
+
+  Merupakan struktur data yang lebih canggih untuk menangani suatu masalah yang lebih kompleks, menyimpan kumpulan data/object lain pada satu tempat.
 
     1. List: menyimpan data secara berbaris dan tiap data memiliki index.
+
        Contoh:
        ```
        void main() async {
@@ -60,6 +64,7 @@
        ```
 
        Penggunaan for in
+
        Contoh:
        ```
        void main() async {
@@ -75,6 +80,7 @@
        ```
     
     2. Map: menyimpan data secara key-value, key berguna selayaknya index pada list. 
+
        Contoh:
        ```
        void main() async {
@@ -92,6 +98,7 @@
        ```
 
        Penggunaan for in
+       
        Contoh:
        ```
        void main() async {
