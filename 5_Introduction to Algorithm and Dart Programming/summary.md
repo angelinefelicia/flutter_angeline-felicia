@@ -32,23 +32,19 @@
 
   Digunakan untuk menyimpan data, memiliki nama yang dapat dipanggil dan digunakan, memiliki tipe data. 
 
-  Contoh:
-
-  int score;
+  Contoh: int score;
 
   Ket:
   - int merupakan tipe data, score merupakan nama.
   - variabel masih bernilai 0 (null).
-  - pemberian value pada variabel dapat menggunakan tanda sama dengan (=).
-  - diakhiri dengan titik koma (;).
+  - Pemberian value pada variabel dapat menggunakan tanda sama dengan (=).
+  - Diakhiri dengan titik koma (;).
 
 - Konstanta
 
   Digunakan untuk menyimpan data, memiliki nama, memiliki tipe data, nilai tetap (tidak dapat diubah).
 
-  Contoh:
-
-  final score = 90;
+  Contoh: final score = 90;
 
 - Tipe data
 
@@ -66,7 +62,7 @@
 
   1. Arithmetic = untuk perhitungan matematis.
 
-     + (tambah), - (kurang), * (kali), / (bagi), % (mod)
+     tambah (+), kurang (-), kali (*), bagi (/), mod (%)
 
   2. Assignment = untuk memberi nilai pada variabel.
 
@@ -79,5 +75,5 @@
      Hasil dari operator comparison akan mengembalikan nilai boolean (true/false).
 
   4. Logical = untuk menggabungkan beberapa kondisi.
-  
+
      && (AND), || (OR), ! (NOT) 
