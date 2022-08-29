@@ -32,7 +32,10 @@
 
   Digunakan untuk menyimpan data, memiliki nama yang dapat dipanggil dan digunakan, memiliki tipe data. 
 
-  Contoh: int score;
+  Contoh:
+  ```
+  int score;
+  ```
 
   Ket:
   - int merupakan tipe data, score merupakan nama.
@@ -44,7 +47,10 @@
 
   Digunakan untuk menyimpan data, memiliki nama, memiliki tipe data, nilai tetap (tidak dapat diubah).
 
-  Contoh: final score = 90;
+  Contoh: 
+  ```
+  final score = 90;
+  ```
 
 - Tipe data
 
