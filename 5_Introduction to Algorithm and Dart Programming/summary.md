@@ -39,7 +39,7 @@
 
   Ket:
   - int merupakan tipe data, score merupakan nama.
-  - variabel masih bernilai 0 (null).
+  - Variabel masih bernilai 0 (null).
   - Pemberian value pada variabel dapat menggunakan tanda sama dengan (=).
   - Diakhiri dengan titik koma (;).
 
