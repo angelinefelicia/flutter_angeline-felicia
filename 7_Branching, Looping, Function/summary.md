@@ -1,9 +1,11 @@
 - Pengambilan Keputusan
+
   Menentukan alur program pada kondisi tertentu.
 
   - IF
     - Memerlukan nilai bool (dari operator logical atau comparison). 
     - Menjalankan bagian proses jika nilai bool bernilai true. 
+
     Contoh:
     ```
     void main() {
@@ -17,6 +19,7 @@
   - IF-ELSE
     - Berjalan dengan IF.
     - Menambah alternatif jika nilai bool adalah false. 
+
     Contoh:
     ```
     void main() {
@@ -35,7 +38,9 @@
     - Berjalan dengan IF.
     - Menambah alternatif jika nilai bool adalah false.
     - Menambah pengujian nilai bool lain. 
+
     Contoh:
+    ```
     void main() {
         var usia = 18;
         // jika usia kurang dari 20, maka ditampilkan remaja pada layar. 
@@ -51,8 +56,10 @@
             print('tidak memiliki golongan');
         }
     }
+    ```
 
 - Perulangan
+
   Menjalankan proses berulang kali. 
 
   - For
@@ -60,6 +67,7 @@
     - Memerlukan nilai awal.
     - Memerlukan nilai bool, jika true maka perulangan dilanjutkan.
     - Memerlukan pengubah nilai. 
+
     Contoh:
     ```
     void main() {
@@ -76,6 +84,7 @@
   - While
     - Tidak diketahui berapa kali perulangan terjadi.
     - Memerlukan nilai bool, jika true maka perulangan dilanjutkan.
+
     Contoh:
     ```
     void main() {
@@ -92,6 +101,7 @@
   - Do-While
     - Mengubah bentuk While.
     - Proses dijalankan minimum sekali, akan diteruskan jika nilai bool adalah true. 
+
     Contoh:
     ```
     void main() {
@@ -105,6 +115,7 @@
     }
     ```
 - Break dan Continue
+
   Cara lain menghentikan perulangan.
 
   Deskripsi:
@@ -143,6 +154,7 @@
     }
     ```
 - Fungsi
+
   Kumpulan kode yang dapat digunakan ulang.
 
   Deskripsi:
@@ -175,7 +187,7 @@
   }
   ```
 
-  Fungsi dengan Return (memberi nilai pada fungsi saat dipanggil)
+  Fungsi dengan Return (memberi nilai pada fungsi saat dipanggil):
   ```
   int jumlah(int a, int b) {
     return a + b;
