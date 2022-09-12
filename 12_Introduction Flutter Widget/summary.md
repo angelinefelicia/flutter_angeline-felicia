@@ -1,4 +1,5 @@
 - Flutter
+
   Merupakan alat pengembangan antar muka pengguna yang digunakan untuk membuat aplikasi mobile, desktop, dan web.
 
   Keunggulan:
@@ -9,12 +10,15 @@
 
   Flutter terdiri dari:
   - SDK (Software Development Kit)
+
     Merupakan alat-alat untuk membantu proses pengembangan aplikasi.
 
   - Framework
+
     Merupakan perlengkapan untuk membentuk aplikasi yang dapat dikustomisasi.
 
   Membuat project flutter: flutter create <nama_project>
+  
   Menjalankan project flutter: flutter run
 
   Struktur direktori:
