@@ -35,7 +35,7 @@
 
 - Widget
   - Digunakan untuk membentuk antar muka (UI).
-  - Berupa class (blue print)
+  - Berupa class (blue print).
   - Dapat terdiri dari beberapa widget lainnya.
 
   Ada 2 Jenis:
@@ -49,7 +49,7 @@
      - Dibuat dengan "extends" pada class "StatefulWidget".
      - 1 widget memakai 2 class (widget dan state).
 
-- Built in Widget
+- Built In Widget
   - Dapat langsung digunakan.
   - Sudah terinstal dengan Flutter.
 
