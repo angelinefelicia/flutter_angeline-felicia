@@ -1,29 +1,37 @@
 - Flutter
-  - Merupakan alat pengembangan antar muka pengguna yang digunakan untuk membuat aplikasi mobile, desktop, dan web.
 
-  - Keunggulan:
-    - Mudah digunakan dan dipelajari.
-    - Produktivitas tinggi.
-    - Dokumentasi lengkap.
-    - Komunitas yang berkembang.
+  Merupakan alat pengembangan antar muka pengguna yang digunakan untuk membuat aplikasi mobile, desktop, dan web.
 
-  - Flutter terdiri dari:
-    - SDK (Software Development Kit)
+  Keunggulan:
+  - Mudah digunakan dan dipelajari.
+  - Produktivitas tinggi.
+  - Dokumentasi lengkap.
+  - Komunitas yang berkembang.
 
-        Merupakan alat-alat untuk membantu proses pengembangan aplikasi.
+  Flutter terdiri dari:
+  - SDK (Software Development Kit)
 
-    - Framework
+    Merupakan alat-alat untuk membantu proses pengembangan aplikasi.
 
-        Merupakan perlengkapan untuk membentuk aplikasi yang dapat dikustomisasi.
+  - Framework
 
-  - Membuat project flutter: flutter create <nama_project>
-  - Menjalankan project flutter: flutter run
+    Merupakan perlengkapan untuk membentuk aplikasi yang dapat dikustomisasi.
 
-  - Struktur direktori:
-    - Directory platform: .android, .iOS, .web
-    - Directory project: lib (ruang kerja utama), test (aktivitas pengujian)
+  Membuat project flutter: 
+  ```
+  flutter create <nama_project>
+  ```
+  
+  Menjalankan project flutter: 
+  ```
+  flutter run
+  ```
 
-  - File utama (main.dart) -> lib
+  Struktur direktori:
+  - Directory platform: .android, .iOS, .web
+  - Directory project: lib (ruang kerja utama), test (aktivitas pengujian)
+  
+  File utama (main.dart) -> lib
 
 - Widget
   - Digunakan untuk membentuk antar muka (UI).
