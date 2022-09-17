@@ -56,37 +56,42 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             },
           ),
-          CupertinoTabScaffold(
-            tabBar: CupertinoTabBar(
-              items: const <BottomNavigationBarItem>[
-                BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.star_fill),
-                  label: 'Favourites',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.clock_solid),
-                  label: 'Recents',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.person_alt_circle_fill),
-                  label: 'Contacts',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.circle_grid_3x3_fill),
-                  label: 'Keypad',
-                ),
-              ],
-            ),
-            tabBuilder: (BuildContext context, int index) {
-              return CupertinoTabView(
-                builder: (BuildContext context) {
-                  return Center(
-                    child: Text(' '),
-                  );
-                },
-              );
-            },
-          )
+          // CustomScrollView(
+          //   slivers: [
+          //     SliverPadding(
+          //       padding: const EdgeInsets.all(16),
+          //       sliver: SliverList(
+          //           delegate: SliverChildBuilderDelegate(
+          //               childCount: 10,
+          //               (context, index) => Row(
+          //                     children: const [
+          //                       Icon(CupertinoIcons.add),
+          //                       Text("ya"),
+          //                     ],
+          //                   ))),
+          //     ),
+          //   ],
+          // ),
+          CupertinoTabBar(
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.person_circle_fill),
+                label: 'Contacts',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.phone_fill),
+                label: 'Calls',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.chat_bubble_2_fill),
+                label: 'Chats',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.settings),
+                label: 'Settings',
+              ),
+            ],
+          ),
         ],
       )),
     );
