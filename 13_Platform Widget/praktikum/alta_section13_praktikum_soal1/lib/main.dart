@@ -101,10 +101,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 backgroundImage: AssetImage('assets/backgrounds/1.jpg'),
               ),
               title: Text("Kal",
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               subtitle: Text(
-                "where are you?",
-                style: TextStyle(fontSize: 12),
+                "laper..",
+                style: TextStyle(fontSize: 14),
               ),
               trailing: Text("Fri", style: TextStyle(fontSize: 12)),
             ),
@@ -120,10 +120,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 backgroundImage: AssetImage('assets/backgrounds/2.jpg'),
               ),
               title: Text("Rei",
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               subtitle: Text(
                 "thanks",
-                style: TextStyle(fontSize: 12),
+                style: TextStyle(fontSize: 14),
               ),
               trailing: Text("Wed", style: TextStyle(fontSize: 12)),
             )
