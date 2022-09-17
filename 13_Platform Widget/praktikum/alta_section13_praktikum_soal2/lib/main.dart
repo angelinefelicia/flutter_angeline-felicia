@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:cupertino_list_tile/cupertino_list_tile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +31,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String text = '';
+  final ScrollController _controllerOne = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -56,22 +58,6 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             },
           ),
-          // CustomScrollView(
-          //   slivers: [
-          //     SliverPadding(
-          //       padding: const EdgeInsets.all(16),
-          //       sliver: SliverList(
-          //           delegate: SliverChildBuilderDelegate(
-          //               childCount: 10,
-          //               (context, index) => Row(
-          //                     children: const [
-          //                       Icon(CupertinoIcons.add),
-          //                       Text("ya"),
-          //                     ],
-          //                   ))),
-          //     ),
-          //   ],
-          // ),
           CupertinoTabBar(
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
