@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '[ANGEL] Platform Widget',
+      title: '[ANGEL] Platform Widget - Android',
       theme: ThemeData(
         colorSchemeSeed: const Color(0xFF0088CC),
       ),
