@@ -1,4 +1,5 @@
 - Flutter CLI (Command Line Interface)
+
   Merupakan alat yang digunakan untuk berinteraksi dengan Flutter SDK. Interaksi tersebut merupakan perintah yang dijalankan dalam terminal untuk melakukan suatu tugas tertentu.
 
   Macam-macam Flutter CLI:
@@ -25,6 +26,7 @@
      flutter channel
      ```
   6. Flutter Pub
+  
      Ada 2 (dua) syntax yang dapat digunakan:
      - Flutter pub add, untuk menambahkan packages ke dependencies yang ada di pubspec.yaml.
        ```
