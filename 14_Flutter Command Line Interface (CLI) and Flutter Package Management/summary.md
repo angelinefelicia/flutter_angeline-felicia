@@ -50,7 +50,7 @@
   - Tujuan: untuk mempercepat pengembangan aplikasi sehingga tidak harus membuat semuanya dari awal/from scratch.
   - Mendapatkan packages dari website pub.dev.
 
-  Cara menambahkan package:
+  Cara menambahkan packages:
   - Cari package di pub.dev.
   - Copy baris dependencies yang ada di bagian installing.
   - Buka pubspec.yaml.
