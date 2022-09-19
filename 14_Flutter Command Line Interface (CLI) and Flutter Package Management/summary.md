@@ -26,7 +26,7 @@
      flutter channel
      ```
   6. Flutter Pub
-  
+
      Ada 2 (dua) syntax yang dapat digunakan:
      - Flutter pub add, untuk menambahkan packages ke dependencies yang ada di pubspec.yaml.
        ```
@@ -41,9 +41,9 @@
      flutter build <DIRECTORY>
      ```
   8. Flutter Clean: perintah untuk menghapus folder build serta file lainnya yang dihasilkan saat kita menjalankan aplikasi di emulator. Perintah ini akan memperkecil ukuran project tersebut.
-    ```
-    flutter clean
-    ```
+     ```
+     flutter clean
+     ```
 
 - Packages Management
   - Flutter mendukung sharing packages yang merupakan kontribusi dari developer lain.
