@@ -55,6 +55,7 @@
   - Digunakan saat ingin menggunakan child layout lebih dari satu, dapat menggunakan children (array).
   - Terdiri dari:
     - Column: mengatur widget secara vertikal.
+
       Contoh:
       ```
       Column(
@@ -65,6 +66,7 @@
       ```
 
     - Row: mengatur widget secara horizontal.
+
       Contoh:
       ```
       Row(
@@ -75,19 +77,21 @@
       ```
 
     - ListView: mengatur widget dalam bentuk list, memiliki kemampuan scroll.
+
       Contoh:
       ```
       ListView(
         children: [
             Container(
-                margin: ..
-                decoration: ..
-                child: ..
+                margin: ...
+                decoration: ...
+                child: ...
             ),
         ],
       );
       ```
     - GridView: mengatur widget dalam bentuk galeri.
+
       Contoh:
       ```
       GridView.count(
@@ -102,13 +106,13 @@
 ---
 
 - Row and Column
-  - Row: untuk meletakkan widget childrennya secara horizontal
-  - Column: untuk meletakkan widget childrennya secara vertikal
+  - Row: untuk meletakkan widget childrennya secara horizontal.
+  - Column: untuk meletakkan widget childrennya secara vertikal.
 
 - MainAxisSize properti
   - Menentukan seberapa banyak space menempati main axis.
-  - Main axis row -> horizontal
-  - Main axis column -> vertikal
+  - Main axis row -> horizontal.
+  - Main axis column -> vertikal.
   - Ada 2 values:
     1. MainAxisSize.max: menempati semua space dari main axis.
     2. MainAxisSize.min: tidak memiliki extra space, hanya untuk childrennya saja.
@@ -125,8 +129,8 @@
 
 - CrossAxisAlignment properti
   - Digunakan Row and Column untuk memposisikan children mereka pada cross axis.
-  - Cross axis row -> vertikal
-  - Cross axis column -> horizontal
+  - Cross axis row -> vertikal.
+  - Cross axis column -> horizontal.
   - Ada 5 values:
     1. CrossAxisAlignment.start
     2. CrossAxisAlignment.end
