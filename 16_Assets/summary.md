@@ -29,8 +29,8 @@
     - Memakai method Image.asset (lokal), digunakan untuk mendapatkan image yang sudah ditambahkan dalam project.
 
       Perbedaan:
-      - AssetImage(): cepat dan CPU friendly
-      - Image.asset: kode lebih bersih dan rapi
+      - AssetImage(): cepat dan CPU friendly.
+      - Image.asset: kode lebih bersih dan rapi.
     - Memakai method Image.network (internet), digunakan untuk mendapatkan data image melalui internet dengan menggunakan string url-nya.
     
     Contoh:
@@ -48,14 +48,14 @@
   - Penentuan font yang akan dipakai biasanya ditentukan oleh UI designer.
   - Penerapan font menggunakan custom font atau dari package.
 
-  - Custom Font, cara:
+  Custom Font, cara:
     1. Cari dan download font.
     2. Import file .ttf.
     3. Daftarkan font di pubspec.yaml.
     4. Mengatur font sebagai default.
     5. Font dapat juga digunakan pada widget tertentu saja.
 
-  - Font dari package, cara:
+  Font dari package, cara:
     1. Tambahkan package google.fonts di dependencies.
     2. Import package di file dart.
     3. Dapat memakai font dengan memanggil GoogleFonts.namaFont().
