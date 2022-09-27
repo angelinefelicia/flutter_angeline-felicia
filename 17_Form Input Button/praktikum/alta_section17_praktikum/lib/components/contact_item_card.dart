@@ -24,8 +24,8 @@ class ContactItemCard extends StatelessWidget {
         ),
       ),
       child: ListTile(
-        // leading:
-        //     CircleAvatar(backgroundImage: AssetImage("assets/images/4.png")),
+        leading:
+            CircleAvatar(backgroundImage: AssetImage("assets/images/5.png")),
         title: Text(
           contact.name,
           style: TextStyle(fontSize: 18),
