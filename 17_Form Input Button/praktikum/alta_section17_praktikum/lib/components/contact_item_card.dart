@@ -14,41 +14,48 @@ class ContactItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.all(0),
+      padding: const EdgeInsets.all(0),
       decoration: BoxDecoration(
-        color: Colors.amberAccent[100],
+        border: Border.all(color: Colors.white),
+        color: Colors.white,
         borderRadius: BorderRadius.circular(
-          20,
+          35,
         ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(contact.name),
-          Text(contact.num),
-          IconButton(
-            onPressed: () {
-              showDialog(
-                  context: context,
-                  builder: (context) => AlertDialog(
-                        content: const Text("Are you sure?"),
-                        actions: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            child: const Text("No"),
-                          ),
-                          TextButton(
-                            onPressed: onPressed,
-                            child: const Text("Yes"),
-                          ),
-                        ],
-                      ));
-            },
-            icon: const Icon(Icons.delete),
-          ),
-        ],
+      child: ListTile(
+        // leading:
+        //     CircleAvatar(backgroundImage: AssetImage("assets/images/4.png")),
+        title: Text(
+          contact.name,
+          style: TextStyle(fontSize: 18),
+        ),
+        subtitle: Text(
+          contact.num,
+          style: TextStyle(fontSize: 14),
+        ),
+        trailing: IconButton(
+          onPressed: () {
+            showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                      content: const Text("Are you sure?"),
+                      actions: [
+                        TextButton(
+                          onPressed: onPressed,
+                          child: const Text("Yes"),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text("No"),
+                        ),
+                      ],
+                    ));
+          },
+          icon: const Icon(Icons.delete),
+        ),
       ),
     );
   }

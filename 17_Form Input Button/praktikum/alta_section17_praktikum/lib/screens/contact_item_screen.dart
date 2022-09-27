@@ -47,12 +47,12 @@ class _ContactItemScreenState extends State<ContactItemScreen> {
     return Scaffold(
       backgroundColor: lightpink,
       appBar: AppBar(
-        title: const Text("New Contact", style: TextStyle(fontSize: 24)),
+        title: const Text("New Contact", style: TextStyle(fontSize: 20)),
         backgroundColor: darkpink,
         elevation: 0,
       ),
       body: Container(
-          margin: const EdgeInsets.all(5),
+          margin: const EdgeInsets.all(15),
           padding: const EdgeInsets.all(0),
           decoration: BoxDecoration(
             border: Border.all(style: BorderStyle.none),
@@ -66,8 +66,8 @@ class _ContactItemScreenState extends State<ContactItemScreen> {
                     prefixIcon: Icon(Icons.person),
                     border: OutlineInputBorder()),
               ),
-              Container(
-                margin: const EdgeInsets.all(5),
+              const SizedBox(
+                height: 15,
               ),
               TextFormField(
                 controller: _contactNumController,
@@ -76,17 +76,23 @@ class _ContactItemScreenState extends State<ContactItemScreen> {
                     prefixIcon: Icon(Icons.phone),
                     border: OutlineInputBorder()),
               ),
-              Container(
-                margin: const EdgeInsets.all(10),
+              const SizedBox(
+                height: 25,
               ),
               ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: darkpink,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                      textStyle:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w300)),
                   onPressed: () {
                     final contactItem = ContactModel(
                         name: _contactNameController.text,
                         num: _contactNumController.text);
                     widget.onCreate(contactItem);
                   },
-                  child: const Text("Submit")),
+                  child: const Text("SUBMIT")),
             ],
           )),
     );

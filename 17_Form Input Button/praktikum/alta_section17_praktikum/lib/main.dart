@@ -1,4 +1,3 @@
-import 'package:alta_section17_praktikum/contact_details.dart';
 import 'package:alta_section17_praktikum/screens/contact_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

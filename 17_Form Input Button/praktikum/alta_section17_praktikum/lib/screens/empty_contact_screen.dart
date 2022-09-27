@@ -13,15 +13,12 @@ class EmptyContactScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: const <Widget>[
           Image(
-            image: AssetImage("assets/1.png"),
-            height: 250,
-          ),
-          SizedBox(
-            height: 20,
+            image: AssetImage("assets/images/2.png"),
+            height: 200,
           ),
           Text(
-            "Belum ada Contact",
-            style: TextStyle(fontSize: 30),
+            "Kosong",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
           ),
         ],
       ),

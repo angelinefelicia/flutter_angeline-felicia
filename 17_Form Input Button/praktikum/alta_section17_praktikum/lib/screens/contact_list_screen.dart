@@ -14,7 +14,7 @@ class ContactListScreen extends StatelessWidget {
     final contactItems = manager.contactModels;
 
     return Padding(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(10),
       child: ListView.separated(
         itemCount: contactItems.length,
         itemBuilder: (context, index) {
@@ -33,7 +33,7 @@ class ContactListScreen extends StatelessWidget {
         },
         separatorBuilder: (context, index) {
           return const SizedBox(
-            height: 16,
+            height: 10,
           );
         },
       ),
