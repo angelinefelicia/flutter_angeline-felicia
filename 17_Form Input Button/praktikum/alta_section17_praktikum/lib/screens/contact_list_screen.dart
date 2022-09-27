@@ -1,9 +1,6 @@
 import 'package:alta_section17_praktikum/components/contact_item_card.dart';
 import 'package:alta_section17_praktikum/models/contact_manager.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class ContactListScreen extends StatelessWidget {
   const ContactListScreen({Key? key, required this.manager}) : super(key: key);

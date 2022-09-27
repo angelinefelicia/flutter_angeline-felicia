@@ -8,7 +8,7 @@ import 'contact_list_screen.dart';
 
 Color lightpink = const Color.fromARGB(255, 255, 236, 235);
 Color pink = const Color.fromARGB(255, 255, 200, 198);
-Color darkpink = Color.fromARGB(255, 255, 171, 168);
+Color darkpink = const Color.fromARGB(255, 255, 171, 168);
 
 class ContactScreen extends StatelessWidget {
   const ContactScreen({Key? key}) : super(key: key);
