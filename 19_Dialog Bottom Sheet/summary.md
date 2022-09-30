@@ -1,0 +1,18 @@
+- Alert Dialog
+  - Widget untuk tampilan android dari material design.
+  - Fungsi: menginformasikan pengguna tentang situasi tertentu.
+  - Dapat digunakan untuk mendapatkan input dari user.
+  - Membutuhkan helper method showDialog.
+  - Cara:
+    - Menambahkan AlertDialog.
+    - Memanggil fungsi showDialog di dalam fungsi onPressed pada IconButton.
+    - showDialog membutuhkan context dan builder.
+    - Di builder-nya akan me-return AlertDialog.
+    - AlertDialog menyediakan properti seperti content dan actions.
+    - Content bisa dimasukkan widget text, gambar, dan animasi gambar.
+    - Actions bisa ditambahkan button untuk menerima respon dari user.
+
+- Bottom Sheet
+  - Seperti dialog tetapi muncul dari bawah layar aplikasi.
+  - Menggunakan fungsi bawaan flutter showModalBottomSheet.
+  - Membutuhkan 2 properti yaitu context dan builder.
