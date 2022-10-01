@@ -3,6 +3,7 @@ import 'package:alta_section20_praktikum/screens/contact_screen.dart';
 import 'package:flutter/material.dart';
 
 class ContactItemScreen extends StatefulWidget {
+  // navigator dengan named
   const ContactItemScreen({Key? key}) : super(key: key);
 
   // navigator tanpa named
