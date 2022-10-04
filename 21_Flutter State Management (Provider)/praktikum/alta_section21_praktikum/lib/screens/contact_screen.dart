@@ -30,7 +30,6 @@ class ContactScreen extends StatelessWidget {
       body: buildContactScreen(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Provider
           final manager = Provider.of<ContactManager>(context, listen: false);
           Navigator.push(
             context,
