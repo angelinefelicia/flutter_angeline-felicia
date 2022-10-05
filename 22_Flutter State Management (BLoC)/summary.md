@@ -27,6 +27,23 @@
     - Provider: penggunaan untuk state management yang lebih kompleks seperti app state.
     - Bloc: menggunakan pola stream/observable, untuk memisahkan UI dengan bisnis logic-nya.
 
+- Provider
+  - ChangeNotifier
+    - Class yang menambah dan menghapus listeners.
+    - Digunakan dengan cara meng-extends.
+    - Memanggil notifyListeners(), fungsi yang memberitahu widget yang menggunakan state bahwa terjadi perubahan data sehingga UI-nya harus dibangun ulang.
+  - ChangeNotifierProvider
+    - Widget yang membungkus sebuah class.
+    - Mengimplementasikan ChangeNotifier dan menggunakan child untuk widget UI-nya.
+    - Menggunakan create, provider yang akan menyimpan model yang telah dibuat.
+  - MultiProvider
+    - Digunakan jika membutuhkan lebih dari satu provider.
+  - Consumer
+    - Widget yang mendengarkan perubahan kelas yang mengimplementasikan ChangeNotifier.
+    - Membangun ulang widget yang dibungkus Consumer saja.
+    - Penting untuk meletakan Consumer pada lingkup sekecil mungkin.
+    - Membutuhkan properti builder yang berisi context, model, dan child.
+
 - BLoC (Business Logic Component)
   - Memisahkan antara business logic dengan UI.
   - BLoC digunakan karena simple, powerful, dan testable.
