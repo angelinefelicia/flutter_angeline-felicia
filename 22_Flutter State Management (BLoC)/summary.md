@@ -41,7 +41,7 @@
   - Consumer
     - Widget yang mendengarkan perubahan kelas yang mengimplementasikan ChangeNotifier.
     - Membangun ulang widget yang dibungkus Consumer saja.
-    - Penting untuk meletakan Consumer pada lingkup sekecil mungkin.
+    - Penting untuk meletakkan Consumer pada lingkup sekecil mungkin.
     - Membutuhkan properti builder yang berisi context, model, dan child.
 
 - BLoC (Business Logic Component)
