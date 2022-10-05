@@ -11,7 +11,7 @@
       UI: the layout on the screen
 
       f: your build methods
-      
+
       state: the application state
 
   - Ephemeral State
@@ -40,3 +40,6 @@
   - Stream
     - Rangkaian proses secara asynchronous.
     - Actor utama di dalam BLoc.
+
+  - BlocProvider: widget yang menyediakan Bloc ke children-nya.
+  - BlocBuilder: widget yang menangani pembuatan widget sebagai respons terhadap state baru.
