@@ -7,9 +7,12 @@
     - Flutter akan membangun ulang UInya ketika ada state atau data yang berubah.
     - Ada 2 jenis state dalam flutter. yaitu ephemeral state dan app state.
     - UI = f(state)
-      - UI: the layout on the screen
-      - f: your build methods
-      - state: the application state
+
+      UI: the layout on the screen
+
+      f: your build methods
+      
+      state: the application state
 
   - Ephemeral State
     - Digunakan ketika tidak ada bagian lain pada widget tree yang membutuhkan untuk mengakses data widgetnya, seperti PageView, BottomNavigationBar, Switch Button.
