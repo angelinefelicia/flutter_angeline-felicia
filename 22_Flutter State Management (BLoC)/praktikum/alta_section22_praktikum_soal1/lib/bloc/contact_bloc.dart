@@ -1,6 +1,5 @@
 import 'dart:js';
 
-import 'package:alta_section22_praktikum_soal1/models/contact_model.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 

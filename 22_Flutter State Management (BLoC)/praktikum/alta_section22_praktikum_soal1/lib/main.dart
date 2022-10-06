@@ -1,10 +1,7 @@
 import 'package:alta_section22_praktikum_soal1/bloc/contact_bloc.dart';
 import 'package:alta_section22_praktikum_soal1/screens/contact_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'models/contact_manager.dart';
 
 void main() {
   runApp(const MyApp());

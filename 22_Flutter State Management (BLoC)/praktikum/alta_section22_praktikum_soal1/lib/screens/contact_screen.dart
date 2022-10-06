@@ -1,12 +1,8 @@
 import 'package:alta_section22_praktikum_soal1/bloc/contact_bloc.dart';
-import 'package:alta_section22_praktikum_soal1/models/contact_manager.dart';
 import 'package:alta_section22_praktikum_soal1/screens/contact_item_screen.dart';
 import 'package:alta_section22_praktikum_soal1/screens/empty_contact_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'contact_list_screen.dart';
 
 Color lightpink = const Color.fromARGB(255, 255, 236, 235);
 Color pink = const Color.fromARGB(255, 255, 200, 198);
