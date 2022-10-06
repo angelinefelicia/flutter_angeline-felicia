@@ -11,3 +11,8 @@ class ContactEventNum extends ContactEvent {
   ContactEventNum(this.num);
   final String num;
 }
+
+class ContactEventPic extends ContactEvent {
+  ContactEventPic(this.pic);
+  File? pic;
+}

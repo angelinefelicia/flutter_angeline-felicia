@@ -1,4 +1,4 @@
-import 'dart:js';
+import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
@@ -13,6 +13,7 @@ class ContactBloc extends Bloc<ContactEvent, ContactState> {
 
   String _name = '';
   String _num = '';
+  File? _pic;
 
   void mapEventToState(ContactEvent event, Emitter<ContactState> emit) async {
     if (event is ContactEventName) {
@@ -23,6 +24,10 @@ class ContactBloc extends Bloc<ContactEvent, ContactState> {
       _num = event.num;
     }
 
+    if (event is ContactEventPic) {
+      _pic = event.pic;
+    }
+
     emit(getBlocState());
   }
 
@@ -30,6 +35,7 @@ class ContactBloc extends Bloc<ContactEvent, ContactState> {
     return ContactState(
       name: _name,
       num: _num,
+      pic: _pic,
     );
   }
 }
