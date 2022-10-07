@@ -52,15 +52,6 @@ class ContactScreen extends StatelessWidget {
                 );
               },
             ),
-
-            // MaterialPageRoute(
-            //   builder: (context) => ContactItemScreen(
-            // onCreate: (contact) {
-            //   manager.addContact(contact);
-            //   Navigator.pop(context);
-            // },
-            //   ),
-            // ),
           );
         },
         backgroundColor: darkpink,

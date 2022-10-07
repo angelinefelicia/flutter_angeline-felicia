@@ -87,10 +87,8 @@ class _ContactItemScreenState extends State<ContactItemScreen> {
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         primary: darkpink,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 15, vertical: 15),
                         textStyle: const TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w300)),
+                            fontSize: 16, fontWeight: FontWeight.bold)),
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
                         final contactItem = ContactModel(
