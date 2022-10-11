@@ -1,3 +1,4 @@
+import 'package:alta_section24_praktikum_soal1/models/model.dart';
 import 'package:alta_section24_praktikum_soal1/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -131,6 +132,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         registerData.setBool('isRegister', false);
                         registerData.setString('name', name);
                         registerData.setString('email', email);
+
                         Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
