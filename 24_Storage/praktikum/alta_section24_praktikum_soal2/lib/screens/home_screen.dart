@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:alta_section24_praktikum_soal2/bloc/register_bloc.dart';
 import 'package:alta_section24_praktikum_soal2/screens/register_screen.dart';
 import 'package:flutter/material.dart';
