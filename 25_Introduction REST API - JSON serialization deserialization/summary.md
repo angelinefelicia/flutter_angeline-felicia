@@ -4,6 +4,7 @@
   - Bagian tampilan dengan proses bisnis berkirim data melalui HTTP Request.
 
   - Mobile/Web/Desktop Client --GET/POST/PUT/DELETE--> REST API ----> Server
+
     Mobile/Web/Desktop Client <--JSON DATA-- REST API <---- Server
 
 - HTTP
@@ -13,14 +14,19 @@
     - Server mengolah dan membalas dengan memberi Response.
 
     - Client --Request--> Server
+
       Client <--Response-- Server
 
   - Struktur Request:
     - URL: alamat halaman yang akan diakses.
     - Method (GET/POST/PUT/DELETE): menunjukkan aksi yang diinginkan.
+
       GET dan POST: mengirim data
+
       PUT: mengubah data
+
       DELETE: menghapus data
+      
     - Header: informasi tambahan terkait Request yang dikirimkan. (jika terdapat error, maka dapat dicek disini)
     - Body: data yang disertakan bersama Request.
 
