@@ -21,12 +21,12 @@
     - URL: alamat halaman yang akan diakses.
     - Method (GET/POST/PUT/DELETE): menunjukkan aksi yang diinginkan.
 
-      GET dan POST: mengirim data
+      GET dan POST: mengirim data.
 
-      PUT: mengubah data
+      PUT: mengubah data.
 
-      DELETE: menghapus data
-      
+      DELETE: menghapus data.
+
     - Header: informasi tambahan terkait Request yang dikirimkan. (jika terdapat error, maka dapat dicek disini)
     - Body: data yang disertakan bersama Request.
 
