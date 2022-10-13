@@ -14,6 +14,7 @@ class _PostScreenState extends State<PostScreen> {
   final Dio dio = Dio();
   final baseurl = 'https://reqres.in/api';
 
+  bool isLoading = false;
   UserInfo? retrievedUser;
 
   @override
@@ -26,6 +27,7 @@ class _PostScreenState extends State<PostScreen> {
     Response response;
 
     try {
+      isLoading = true;
       response = await dio.post(
         '$baseurl/users',
         data: userInfo.toJson(),
@@ -33,6 +35,7 @@ class _PostScreenState extends State<PostScreen> {
       print('User created: ${response.data}');
 
       setState(() {
+        isLoading = false;
         retrievedUser = UserInfo.fromJson(response.data);
       });
     } catch (e) {
@@ -47,16 +50,31 @@ class _PostScreenState extends State<PostScreen> {
         title: const Text("New User"),
         backgroundColor: Colors.amber,
       ),
-      body: retrievedUser != null
-          ? Container(
-              child: Column(
-                children: [
-                  Text(retrievedUser!.name),
-                  Text(retrievedUser!.job),
-                ],
-              ),
+      body: isLoading
+          ? const Center(
+              child: CircularProgressIndicator(),
             )
-          : Container(),
+          : retrievedUser != null
+              ? Container(
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    color: Colors.white,
+                  ),
+                  child: ListTile(
+                    title: Text(retrievedUser!.name),
+                    subtitle: Text(retrievedUser!.job),
+                    trailing: Text(
+                      retrievedUser!.createdAt.toString(),
+                      style: const TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ),
+                )
+              : Container(),
     );
   }
 }
