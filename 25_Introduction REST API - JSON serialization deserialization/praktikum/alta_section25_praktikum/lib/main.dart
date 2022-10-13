@@ -1,7 +1,9 @@
 import 'package:alta_section25_praktikum/models/dio_client.dart';
 import 'package:alta_section25_praktikum/models/user.dart';
 import 'package:alta_section25_praktikum/models/data.dart';
+import 'package:alta_section25_praktikum/models/user_info.dart';
 import 'package:alta_section25_praktikum/screens/getScreen.dart';
+import 'package:alta_section25_praktikum/screens/postScreen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
@@ -37,6 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
   final _jobController = TextEditingController();
 
   final DioClient client = DioClient();
+
+  String output = '';
 
   @override
   void dispose() {
@@ -97,7 +101,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   width: 85,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      UserInfo newUser = UserInfo(
+                          name: _nameController.text, job: _jobController.text);
+                      // client.createUser(userInfo: newUser);
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PostScreen(userInfo: newUser),
+                        ),
+                      );
+                    },
                     child: const Text("POST"),
                   ),
                 ),
@@ -120,6 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(
               height: 30,
             ),
+            Text(output),
             // FutureBuilder(
             //   future: client.getUser(id: 1),
             //   builder: (context, snapshot) {
