@@ -47,8 +47,6 @@ class _MyHomePageState extends State<MyHomePage> {
       UserInfo(name: "name", job: "job", id: 0, createdAt: "currentDateTime");
 
   var idRandom = Random().nextInt(100) + 5;
-  String currentDateTime =
-      DateFormat("d-MMM-y HH:mm:ss").format(DateTime.now());
 
   String output = '';
 
@@ -116,9 +114,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           name: _nameController.text,
                           job: _jobController.text,
                           id: idRandom,
-                          createdAt: currentDateTime);
-
-                      print(newUser.createdAt);
+                          createdAt: DateFormat("d-MMM-y HH:mm:ss")
+                              .format(DateTime.now()));
+                      print("Date created: ${newUser.createdAt}");
 
                       Navigator.push(
                         context,
@@ -139,8 +137,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         job: _jobController.text,
                         id: newUser.id,
                         createdAt: newUser.createdAt,
-                        updatedAt: currentDateTime,
+                        updatedAt: DateFormat("d-MMM-y HH:mm:ss")
+                            .format(DateTime.now()),
                       );
+                      print("Date updated: ${updateUser.updatedAt}");
 
                       Navigator.push(
                         context,
