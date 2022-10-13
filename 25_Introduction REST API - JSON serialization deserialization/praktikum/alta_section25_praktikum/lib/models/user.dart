@@ -9,6 +9,7 @@ class User {
     required this.data,
   });
 
+  @JsonKey(name: 'data')
   Data data;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

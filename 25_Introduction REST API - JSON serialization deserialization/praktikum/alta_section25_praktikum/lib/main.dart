@@ -1,6 +1,8 @@
 import 'package:alta_section25_praktikum/models/dio_client.dart';
 import 'package:alta_section25_praktikum/models/user.dart';
 import 'package:alta_section25_praktikum/models/data.dart';
+import 'package:alta_section25_praktikum/screens/getScreen.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'dart:convert';
@@ -81,7 +83,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   width: 85,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const GetScreen(),
+                        ),
+                      );
+                    },
                     child: const Text("GET"),
                   ),
                 ),
@@ -111,40 +120,36 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(
               height: 30,
             ),
-            const Text(
-              "Result",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-            ),
-            const Text(" "),
-            FutureBuilder<User?>(
-                future: client.getUser(id: 1),
-                builder: (context, snapshot) {
-                  if (snapshot.hasData) {
-                    User? userInfo = snapshot.data;
+            // FutureBuilder(
+            //   future: client.getUser(id: 1),
+            //   builder: (context, snapshot) {
+            //     if (snapshot.hasData) {
+            //       User? userInfo = snapshot.data as User?;
 
-                    if (userInfo != null) {
-                      Data userData = userInfo.data;
-                      return Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Image.network(userData.avatar),
-                          const SizedBox(
-                            height: 8.0,
-                          ),
-                          Text(
-                            '${userInfo.data.firstName} ${userInfo.data.lastName}',
-                            style: TextStyle(fontSize: 16.0),
-                          ),
-                          Text(
-                            userData.email,
-                            style: TextStyle(fontSize: 16.0),
-                          ),
-                        ],
-                      );
-                    }
-                  }
-                  return CircularProgressIndicator();
-                }),
+            //       if (userInfo != null) {
+            //         Data userData = userInfo.data;
+            //         return Column(
+            //           mainAxisSize: MainAxisSize.min,
+            //           children: [
+            //             Image.network(userData.avatar),
+            //             const SizedBox(
+            //               height: 8.0,
+            //             ),
+            //             Text(
+            //               '${userInfo.data.firstName} ${userInfo.data.lastName}',
+            //               style: TextStyle(fontSize: 16.0),
+            //             ),
+            //             Text(
+            //               userData.email,
+            //               style: TextStyle(fontSize: 16.0),
+            //             ),
+            //           ],
+            //         );
+            //       }
+            //     }
+            //     return CircularProgressIndicator();
+            //   },
+            // ),
           ],
         ),
       ),
