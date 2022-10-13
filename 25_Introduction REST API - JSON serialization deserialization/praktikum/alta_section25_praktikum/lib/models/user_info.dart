@@ -6,15 +6,15 @@ part 'user_info.g.dart';
 class UserInfo {
   String name;
   String job;
-  String? id;
-  String? createdAt;
+  int id;
+  String createdAt;
   String? updatedAt;
 
   UserInfo({
     required this.name,
     required this.job,
-    this.id,
-    this.createdAt,
+    required this.id,
+    required this.createdAt,
     this.updatedAt,
   });
 

@@ -1,5 +1,3 @@
-import 'package:alta_section25_praktikum/models/data.dart';
-import 'package:alta_section25_praktikum/models/list_user.dart';
 import 'package:alta_section25_praktikum/models/user.dart';
 import 'package:alta_section25_praktikum/models/user_info.dart';
 import 'package:dio/dio.dart';
@@ -50,7 +48,7 @@ class DioClient {
 
   Future<UserInfo?> updateUser({
     required UserInfo userInfo,
-    required String id,
+    required String? id,
   }) async {
     UserInfo? updatedUser;
 

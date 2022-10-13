@@ -10,8 +10,8 @@ UserInfo _$UserInfoFromJson(Map<String, dynamic> json) {
   return UserInfo(
     name: json['name'] as String,
     job: json['job'] as String,
-    id: json['id'] as String?,
-    createdAt: json['createdAt'] as String?,
+    id: json['id'] as int,
+    createdAt: json['createdAt'] as String,
     updatedAt: json['updatedAt'] as String?,
   );
 }

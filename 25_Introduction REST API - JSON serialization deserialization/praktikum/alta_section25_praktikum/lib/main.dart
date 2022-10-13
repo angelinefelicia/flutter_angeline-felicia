@@ -1,13 +1,14 @@
+import 'dart:math';
+
 import 'package:alta_section25_praktikum/models/dio_client.dart';
-import 'package:alta_section25_praktikum/models/user.dart';
-import 'package:alta_section25_praktikum/models/data.dart';
 import 'package:alta_section25_praktikum/models/user_info.dart';
 import 'package:alta_section25_praktikum/screens/getScreen.dart';
 import 'package:alta_section25_praktikum/screens/postScreen.dart';
-import 'package:flutter/foundation.dart';
+import 'package:alta_section25_praktikum/screens/putScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:dio/dio.dart';
-import 'dart:convert';
+
+import 'package:intl/intl.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +40,15 @@ class _MyHomePageState extends State<MyHomePage> {
   final _jobController = TextEditingController();
 
   final DioClient client = DioClient();
+
+  UserInfo newUser =
+      UserInfo(name: "name", job: "job", id: 0, createdAt: "currentDateTime");
+  UserInfo updateUser =
+      UserInfo(name: "name", job: "job", id: 0, createdAt: "currentDateTime");
+
+  var idRandom = Random().nextInt(100) + 5;
+  String currentDateTime =
+      DateFormat("d-MMM-y HH:mm:ss").format(DateTime.now());
 
   String output = '';
 
@@ -102,9 +112,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: 85,
                   child: ElevatedButton(
                     onPressed: () {
-                      UserInfo newUser = UserInfo(
-                          name: _nameController.text, job: _jobController.text);
-                      // client.createUser(userInfo: newUser);
+                      newUser = UserInfo(
+                          name: _nameController.text,
+                          job: _jobController.text,
+                          id: idRandom,
+                          createdAt: currentDateTime);
+
+                      print(newUser.createdAt);
 
                       Navigator.push(
                         context,
@@ -119,7 +133,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   width: 85,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      updateUser = UserInfo(
+                        name: _nameController.text,
+                        job: _jobController.text,
+                        id: newUser.id,
+                        createdAt: newUser.createdAt,
+                        updatedAt: currentDateTime,
+                      );
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              PutScreen(userInfo: updateUser, id: newUser.id),
+                        ),
+                      );
+                    },
                     child: const Text("PUT"),
                   ),
                 ),
