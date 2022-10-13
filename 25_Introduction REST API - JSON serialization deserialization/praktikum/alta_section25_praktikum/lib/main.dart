@@ -35,6 +35,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final formKey = GlobalKey<FormState>();
+
   final _nameController = TextEditingController();
   final _jobController = TextEditingController();
 
@@ -65,114 +67,134 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         margin: const EdgeInsets.all(15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TextField(
-              controller: _nameController,
-              decoration: const InputDecoration(
-                  labelText: 'Name',
-                  prefixIcon: Icon(Icons.person),
-                  border: OutlineInputBorder()),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextField(
-              controller: _jobController,
-              decoration: const InputDecoration(
-                  labelText: 'Job',
-                  prefixIcon: Icon(Icons.work),
-                  border: OutlineInputBorder()),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: 85,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const GetScreen(),
-                        ),
-                      );
-                    },
-                    child: const Text("GET"),
+        child: Form(
+          key: formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TextFormField(
+                validator: (String? value) =>
+                    value == '' ? "This field is required" : null,
+                controller: _nameController,
+                decoration: const InputDecoration(
+                    labelText: 'Name',
+                    prefixIcon: Icon(Icons.person),
+                    border: OutlineInputBorder()),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                validator: (String? value) =>
+                    value == '' ? "This field is required" : null,
+                controller: _jobController,
+                decoration: const InputDecoration(
+                    labelText: 'Job',
+                    prefixIcon: Icon(Icons.work),
+                    border: OutlineInputBorder()),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 85,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const GetScreen(),
+                          ),
+                        );
+                      },
+                      child: const Text("GET"),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: 85,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      newUser = UserInfo(
-                          name: _nameController.text,
-                          job: _jobController.text,
-                          id: idRandom,
-                          createdAt: DateFormat("d-MMM-y HH:mm:ss")
-                              .format(DateTime.now()));
-                      print("Date created: ${newUser.createdAt}");
+                  SizedBox(
+                    width: 85,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        final isValidForm = formKey.currentState!.validate();
 
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PostScreen(userInfo: newUser),
-                        ),
-                      );
-                    },
-                    child: const Text("POST"),
-                  ),
-                ),
-                SizedBox(
-                  width: 85,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      updateUser = UserInfo(
-                        name: _nameController.text,
-                        job: _jobController.text,
-                        id: newUser.id,
-                        createdAt: newUser.createdAt,
-                        updatedAt: DateFormat("d-MMM-y HH:mm:ss")
-                            .format(DateTime.now()),
-                      );
-                      print("Date updated: ${updateUser.updatedAt}");
+                        if (isValidForm) {
+                          newUser = UserInfo(
+                              name: _nameController.text,
+                              job: _jobController.text,
+                              id: idRandom,
+                              createdAt: DateFormat("d-MMM-y HH:mm:ss")
+                                  .format(DateTime.now()));
+                          print("Date created: ${newUser.createdAt}");
 
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              PutScreen(userInfo: updateUser, id: newUser.id),
-                        ),
-                      );
-                    },
-                    child: const Text("PUT"),
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  PostScreen(userInfo: newUser),
+                            ),
+                          );
+                        }
+                      },
+                      child: const Text("POST"),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: 85,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      client.deleteUser(id: newUser.id);
-                      setState(() {
-                        output = "User deleted!";
-                        _nameController.clear();
-                        _jobController.clear();
-                      });
-                    },
-                    child: const Text("DELETE"),
+                  SizedBox(
+                    width: 85,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        final isValidForm = formKey.currentState!.validate();
+
+                        if (isValidForm) {
+                          updateUser = UserInfo(
+                            name: _nameController.text,
+                            job: _jobController.text,
+                            id: newUser.id,
+                            createdAt: newUser.createdAt,
+                            updatedAt: DateFormat("d-MMM-y HH:mm:ss")
+                                .format(DateTime.now()),
+                          );
+                          print("Date updated: ${updateUser.updatedAt}");
+
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PutScreen(
+                                  userInfo: updateUser, id: newUser.id),
+                            ),
+                          );
+                        }
+                      },
+                      child: const Text("PUT"),
+                    ),
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Text(output),
-          ],
+                  SizedBox(
+                    width: 85,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        final isValidForm = formKey.currentState!.validate();
+
+                        if (isValidForm) {
+                          client.deleteUser(id: newUser.id);
+                          setState(() {
+                            output = "User deleted!";
+                            _nameController.clear();
+                            _jobController.clear();
+                          });
+                        }
+                      },
+                      child: const Text("DELETE"),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Text(output),
+            ],
+          ),
         ),
       ),
     );
