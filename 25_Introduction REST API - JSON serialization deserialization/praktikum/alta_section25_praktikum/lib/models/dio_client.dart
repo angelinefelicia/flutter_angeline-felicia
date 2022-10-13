@@ -68,7 +68,7 @@ class DioClient {
     return updatedUser;
   }
 
-  Future<void> deleteUser({required String id}) async {
+  Future<void> deleteUser({required int id}) async {
     try {
       await dio.delete('$baseurl/users/$id');
       print('User deleted!');

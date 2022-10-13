@@ -8,7 +8,6 @@ import 'package:alta_section25_praktikum/screens/putScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:intl/intl.dart';
-import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
   runApp(const MyApp());
@@ -156,7 +155,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   width: 85,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      client.deleteUser(id: newUser.id);
+                      setState(() {
+                        output = "User deleted!";
+                        _nameController.clear();
+                        _jobController.clear();
+                      });
+                    },
                     child: const Text("DELETE"),
                   ),
                 ),
@@ -166,36 +172,6 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 30,
             ),
             Text(output),
-            // FutureBuilder(
-            //   future: client.getUser(id: 1),
-            //   builder: (context, snapshot) {
-            //     if (snapshot.hasData) {
-            //       User? userInfo = snapshot.data as User?;
-
-            //       if (userInfo != null) {
-            //         Data userData = userInfo.data;
-            //         return Column(
-            //           mainAxisSize: MainAxisSize.min,
-            //           children: [
-            //             Image.network(userData.avatar),
-            //             const SizedBox(
-            //               height: 8.0,
-            //             ),
-            //             Text(
-            //               '${userInfo.data.firstName} ${userInfo.data.lastName}',
-            //               style: TextStyle(fontSize: 16.0),
-            //             ),
-            //             Text(
-            //               userData.email,
-            //               style: TextStyle(fontSize: 16.0),
-            //             ),
-            //           ],
-            //         );
-            //       }
-            //     }
-            //     return CircularProgressIndicator();
-            //   },
-            // ),
           ],
         ),
       ),
