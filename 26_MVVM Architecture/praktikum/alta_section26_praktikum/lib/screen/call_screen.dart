@@ -1,5 +1,4 @@
 import 'package:alta_section26_praktikum/model/contact_model.dart';
-import 'package:alta_section26_praktikum/screen/call_screen.dart';
 import 'package:alta_section26_praktikum/screen/contact/contact_view_model.dart';
 import 'package:alta_section26_praktikum/screen/drawer_item.dart';
 import 'package:flutter/material.dart';
@@ -9,21 +8,21 @@ Color lightpink = const Color.fromARGB(255, 255, 236, 235);
 Color pink = const Color.fromARGB(255, 255, 200, 198);
 Color darkpink = const Color.fromARGB(255, 255, 171, 168);
 
-class ContactScreen extends StatefulWidget {
-  const ContactScreen({Key? key}) : super(key: key);
+class CallScreen extends StatefulWidget {
+  const CallScreen({Key? key}) : super(key: key);
 
   @override
-  State<ContactScreen> createState() => _ContactScreenState();
+  State<CallScreen> createState() => _CallScreenState();
 }
 
-class _ContactScreenState extends State<ContactScreen> {
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
-      Provider.of<ContactViewModel>(context, listen: false).getAllContacts();
-    });
-  }
+class _CallScreenState extends State<CallScreen> {
+  // @override
+  // void didChangeDependencies() {
+  //   super.didChangeDependencies();
+  //   WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+  //     Provider.of<ContactViewModel>(context, listen: false).getAllContacts();
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +33,7 @@ class _ContactScreenState extends State<ContactScreen> {
       backgroundColor: lightpink,
       appBar: AppBar(
         title: const Text(
-          "Contacts",
+          "Call",
           style: TextStyle(color: Colors.white, fontSize: 24),
         ),
         centerTitle: true,
@@ -75,6 +74,10 @@ class _ContactScreenState extends State<ContactScreen> {
         subtitle: Text(
           contact.phone,
           style: const TextStyle(fontSize: 14),
+        ),
+        trailing: const Icon(
+          Icons.phone,
+          color: Colors.green,
         ),
       ),
     );
