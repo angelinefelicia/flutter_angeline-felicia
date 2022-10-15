@@ -27,7 +27,7 @@ class _ContactScreenState extends State<ContactScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final modalView = Provider.of<ContactViewModel>(context);
+    final modelView = Provider.of<ContactViewModel>(context);
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -43,9 +43,9 @@ class _ContactScreenState extends State<ContactScreen> {
       ),
       drawer: const DrawerItem(),
       body: ListView.builder(
-        itemCount: modalView.contacts.length,
+        itemCount: modelView.contacts.length,
         itemBuilder: (context, index) {
-          final contact = modalView.contacts[index];
+          final contact = modelView.contacts[index];
           return contactItemCard(contact);
         },
       ),
