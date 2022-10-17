@@ -2,8 +2,6 @@
   - Merupakan mesin yang memiliki sejumlah state.
   - Tiap state menunjukkan apa yang terjadi sebelumnya.
 
-  Contoh:
-
   Terdapat 3 state yang menunjukkan kejadian dalam suatu proses:
   - IDDLE   : saat tidak terjadi proses.
   - RUNNING : saat proses sedang berjalan.
