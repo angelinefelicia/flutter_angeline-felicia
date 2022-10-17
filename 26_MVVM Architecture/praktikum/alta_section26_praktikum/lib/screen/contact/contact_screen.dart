@@ -1,5 +1,4 @@
 import 'package:alta_section26_praktikum/model/contact_model.dart';
-import 'package:alta_section26_praktikum/screen/call_screen.dart';
 import 'package:alta_section26_praktikum/screen/contact/contact_view_model.dart';
 import 'package:alta_section26_praktikum/screen/drawer_item.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +19,7 @@ class _ContactScreenState extends State<ContactScreen> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Provider.of<ContactViewModel>(context, listen: false).getAllContacts();
     });
   }

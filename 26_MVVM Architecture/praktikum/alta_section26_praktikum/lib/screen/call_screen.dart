@@ -16,14 +16,6 @@ class CallScreen extends StatefulWidget {
 }
 
 class _CallScreenState extends State<CallScreen> {
-  // @override
-  // void didChangeDependencies() {
-  //   super.didChangeDependencies();
-  //   WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
-  //     Provider.of<ContactViewModel>(context, listen: false).getAllContacts();
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     final modelView = Provider.of<ContactViewModel>(context);
