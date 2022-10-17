@@ -3,10 +3,11 @@
   - Tiap state menunjukkan apa yang terjadi sebelumnya.
 
   Contoh:
+
   Terdapat 3 state yang menunjukkan kejadian dalam suatu proses:
-  1. IDDLE   : saat tidak terjadi proses.
-  2. RUNNING : saat proses sedang berjalan.
-  3. ERROR   : saat proses gagal diselesaikan.
+  - IDDLE   : saat tidak terjadi proses.
+  - RUNNING : saat proses sedang berjalan.
+  - ERROR   : saat proses gagal diselesaikan.
 
   Proses Sukses:
   - IDDLE berubah menjadi RUNNING saat proses berjalan.
@@ -20,9 +21,9 @@
   Implementasi Finite State Machines pada MVVM (ViewModel)
   - Menambah Enum
     - Membuat enum untuk masing-masing state:
-      1. none saat IDDLE.
-      2. loading saat RUNNING.
-      3. error saat ERROR.
+      - none saat IDDLE.
+      - loading saat RUNNING.
+      - error saat ERROR.
   - Menambah Getter-Setter
     - Membuat getter-setter untuk menyimpan state dari widget.
   - Gunakan State
@@ -44,8 +45,8 @@
     - Menjadi dokumentasi.
 
     Cara melakukan:
-    1. Manual: unit dijalankan dan dicek hasilnya secara manual.
-    2. Automated: menulis script yang dapat dijalankan berkali-kali menggunakan test runner.
+    - Manual: unit dijalankan dan dicek hasilnya secara manual.
+    - Automated: menulis script yang dapat dijalankan berkali-kali menggunakan test runner.
 
     Cara menggunakan Automated testing:
     - Menambah dependencies
