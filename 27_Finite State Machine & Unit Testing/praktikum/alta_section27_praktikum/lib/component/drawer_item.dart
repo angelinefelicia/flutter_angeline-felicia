@@ -39,7 +39,7 @@ class DrawerItem extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.restaurant_rounded),
+            leading: const Icon(Icons.restaurant_menu_rounded),
             title: const Text('Foods'),
             onTap: () {
               Navigator.push(
