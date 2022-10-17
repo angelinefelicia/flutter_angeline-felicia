@@ -11,12 +11,13 @@ void main() {
     FoodApi foodApi = MockFoodApi();
 
     test('get all foods returns data', () async {
-      when(foodApi.getFoods()).thenAnswer(
-        (_) async => <Food>[
-          Food(id: 1, name: 'a'),
-        ],
-      );
-      var foods = await foodApi.getFoods();
+      // when(foodApi.getFoods()).thenAnswer(
+      //   (_) async => <Food>[
+      //     Food(id: 1, name: 'a'),
+      //   ],
+      // );
+      // var foods = await foodApi.getFoods();
+      var foods = await FoodApi.getFoods();
       expect(foods.isNotEmpty, true);
     });
   });

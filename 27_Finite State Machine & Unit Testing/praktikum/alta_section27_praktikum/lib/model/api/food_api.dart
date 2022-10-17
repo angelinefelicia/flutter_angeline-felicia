@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import 'dart:convert';
 
 class FoodApi {
-  Future<List<Food>> getFoods() async {
+  static Future<List<Food>> getFoods() async {
     final Dio dio = Dio();
     final baseurl =
         'https://my-json-server.typicode.com/hadihammurabi/flutter-webservice/foods';

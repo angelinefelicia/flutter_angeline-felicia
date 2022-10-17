@@ -7,8 +7,8 @@ class FoodViewModel with ChangeNotifier {
   List<Food> get foods => _foods;
 
   getAllFoods() async {
-    // final allFoods = await FoodApi.getFoods();
-    // _foods = allFoods;
+    final allFoods = await FoodApi.getFoods();
+    _foods = allFoods;
     notifyListeners();
   }
 }
