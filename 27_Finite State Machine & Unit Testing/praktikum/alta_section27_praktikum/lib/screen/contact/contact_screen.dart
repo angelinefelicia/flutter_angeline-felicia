@@ -17,16 +17,17 @@ class ContactScreen extends StatefulWidget {
 
 class _ContactScreenState extends State<ContactScreen> {
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      Provider.of<ContactViewModel>(context, listen: false).getAllContacts();
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      var viewModel = Provider.of<ContactViewModel>(context, listen: false);
+      await viewModel.getAllContacts();
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final modelView = Provider.of<ContactViewModel>(context);
+    ContactViewModel viewModel = Provider.of<ContactViewModel>(context);
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -41,13 +42,36 @@ class _ContactScreenState extends State<ContactScreen> {
         elevation: 0,
       ),
       drawer: const DrawerItem(),
-      body: ListView.builder(
-        itemCount: modelView.contacts.length,
-        itemBuilder: (context, index) {
-          final contact = modelView.contacts[index];
-          return contactItemCard(contact);
-        },
-      ),
+      body: body(viewModel),
+    );
+  }
+
+  Widget body(ContactViewModel viewModel) {
+    final isLoading = viewModel.state == ContactViewState.loading;
+    final isError = viewModel.state == ContactViewState.error;
+
+    if (isLoading) {
+      return const Center(
+        child: CircularProgressIndicator(),
+      );
+    }
+
+    if (isError) {
+      return const Center(
+        child: Text("No data found!"),
+      );
+    }
+
+    return listView(viewModel);
+  }
+
+  Widget listView(ContactViewModel viewModel) {
+    return ListView.builder(
+      itemCount: viewModel.contacts.length,
+      itemBuilder: (context, index) {
+        final contact = viewModel.contacts[index];
+        return contactItemCard(contact);
+      },
     );
   }
 

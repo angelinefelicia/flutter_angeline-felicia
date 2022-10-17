@@ -17,16 +17,17 @@ class FoodScreen extends StatefulWidget {
 
 class _FoodScreenState extends State<FoodScreen> {
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      Provider.of<FoodViewModel>(context, listen: false).getAllFoods();
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      var viewModel = Provider.of<FoodViewModel>(context, listen: false);
+      await viewModel.getAllFoods();
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final modelView = Provider.of<FoodViewModel>(context);
+    FoodViewModel viewModel = Provider.of<FoodViewModel>(context);
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -41,13 +42,36 @@ class _FoodScreenState extends State<FoodScreen> {
         elevation: 0,
       ),
       drawer: const DrawerItem(),
-      body: ListView.builder(
-        itemCount: modelView.foods.length,
-        itemBuilder: (context, index) {
-          final food = modelView.foods[index];
-          return foodItemCard(food);
-        },
-      ),
+      body: body(viewModel),
+    );
+  }
+
+  Widget body(FoodViewModel viewModel) {
+    final isLoading = viewModel.state == FoodViewState.loading;
+    final isError = viewModel.state == FoodViewState.error;
+
+    if (isLoading) {
+      return const Center(
+        child: CircularProgressIndicator(),
+      );
+    }
+
+    if (isError) {
+      return const Center(
+        child: Text("No data found!"),
+      );
+    }
+
+    return listView(viewModel);
+  }
+
+  Widget listView(FoodViewModel viewModel) {
+    return ListView.builder(
+      itemCount: viewModel.foods.length,
+      itemBuilder: (context, index) {
+        final food = viewModel.foods[index];
+        return foodItemCard(food);
+      },
     );
   }
 
