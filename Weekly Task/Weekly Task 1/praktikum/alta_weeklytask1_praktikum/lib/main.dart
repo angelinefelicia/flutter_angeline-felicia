@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -69,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Container(
                     padding: const EdgeInsets.all(5),
-                    margin: const EdgeInsets.only(left: 5),
+                    margin: const EdgeInsets.only(left: 18),
                     child: Image.asset(
                       "assets/images/bear1.png",
                       width: 122,
@@ -109,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Container(
                     padding: const EdgeInsets.all(5),
-                    margin: const EdgeInsets.only(left: 5),
+                    margin: const EdgeInsets.only(left: 10),
                     child: Image.asset(
                       "assets/images/bear1.png",
                       width: 122,
