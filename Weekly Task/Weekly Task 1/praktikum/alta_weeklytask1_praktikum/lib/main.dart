@@ -148,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           value == '' ? "This field is required!" : null,
                       controller: _nameController,
                       decoration: const InputDecoration(
-                        labelText: 'Name',
+                        labelText: 'Username',
                         labelStyle: TextStyle(color: Colors.white),
                         prefixIcon: Icon(
                           Icons.person,
@@ -208,11 +208,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(primary: white),
                       onPressed: () {
-                        setState(() {
-                          name = _nameController.text;
-                          email = _emailController.text;
-                          message = _messageController.text;
-                        });
+                        if (formKey.currentState!.validate()) {
+                          setState(() {
+                            name = _nameController.text;
+                            email = _emailController.text;
+                            message = _messageController.text;
+                          });
+                        }
                       },
                       child: const Text(
                         "SUBMIT",
@@ -223,10 +225,33 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10),
-                    Text(name),
-                    Text(email),
-                    Text(message),
+                    const SizedBox(height: 20),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Result :",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          Text(name),
+                          const SizedBox(height: 2),
+                          Text(email),
+                          const SizedBox(height: 2),
+                          Text(message),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
