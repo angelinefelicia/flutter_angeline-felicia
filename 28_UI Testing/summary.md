@@ -20,7 +20,7 @@ UI Testing
     - Tiap scenario pengujian disebut test case.
 
   - Script testing
-    - Test case diawali dengan testWidgets dan diberi judul.
+    - Test case diawali dengan "testWidgets" dan diberi judul.
     - Simulasi proses mengaktifkan halaman AboutScreen.
     - Memeriksa apakah di halaman tersebut terdapat teks "About Screen".
 
@@ -40,6 +40,6 @@ UI Testing
   ```
 
   - Menjalankan testing
-    - Perintah flutter test akan menjalankan seluruh file test yang dibuat.
+    - Perintah "flutter test" akan menjalankan seluruh file test yang dibuat.
     - Hasil: lamanya waktu pengujian, total pengujian yang dilakukan, dan pesan bahwa pengujian berhasil.
     - Jika hasil dari testing gagal, maka akan ditampilkan pesan penyebab gagalnya.
