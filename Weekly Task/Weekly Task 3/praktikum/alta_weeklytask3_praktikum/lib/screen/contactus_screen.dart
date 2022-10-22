@@ -137,10 +137,14 @@ class _ContactusScreenState extends State<ContactusScreen> {
                             ),
                             context: context,
                             builder: (context) => NewUserDataModal(
-                                name: _nameController.text,
-                                email: _emailController.text,
-                                message: _messageController.text),
+                                name: contactusData.name,
+                                email: contactusData.email,
+                                message: contactusData.message),
                           );
+
+                          _nameController.text = '';
+                          _emailController.text = '';
+                          _messageController.text = '';
                         }
                       },
                       child: const Text(
