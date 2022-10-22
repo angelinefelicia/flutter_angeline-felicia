@@ -231,7 +231,10 @@ class NewUserDataModal extends StatelessWidget {
                   ),
                   TextSpan(
                     text: name,
-                    style: const TextStyle(fontStyle: FontStyle.italic),
+                    style: const TextStyle(
+                      fontStyle: FontStyle.italic,
+                      color: Colors.black,
+                    ),
                   ),
                 ],
               ),
@@ -248,7 +251,10 @@ class NewUserDataModal extends StatelessWidget {
                   ),
                   TextSpan(
                     text: email,
-                    style: const TextStyle(fontStyle: FontStyle.italic),
+                    style: const TextStyle(
+                      fontStyle: FontStyle.italic,
+                      color: Colors.black,
+                    ),
                   ),
                 ],
               ),
@@ -262,7 +268,10 @@ class NewUserDataModal extends StatelessWidget {
             ),
             Text(
               message,
-              style: const TextStyle(fontStyle: FontStyle.italic),
+              style: const TextStyle(
+                fontStyle: FontStyle.italic,
+                color: Colors.black,
+              ),
             ),
           ],
         ),

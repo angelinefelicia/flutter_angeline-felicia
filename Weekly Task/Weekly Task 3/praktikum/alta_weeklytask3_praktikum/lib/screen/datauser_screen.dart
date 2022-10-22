@@ -65,7 +65,10 @@ class UserDataCard extends StatelessWidget {
                   ),
                   TextSpan(
                     text: data.name,
-                    style: const TextStyle(fontStyle: FontStyle.italic),
+                    style: const TextStyle(
+                      fontStyle: FontStyle.italic,
+                      color: Colors.black,
+                    ),
                   ),
                 ],
               ),
@@ -82,7 +85,10 @@ class UserDataCard extends StatelessWidget {
                   ),
                   TextSpan(
                     text: data.email,
-                    style: const TextStyle(fontStyle: FontStyle.italic),
+                    style: const TextStyle(
+                      fontStyle: FontStyle.italic,
+                      color: Colors.black,
+                    ),
                   ),
                 ],
               ),
@@ -96,7 +102,10 @@ class UserDataCard extends StatelessWidget {
             ),
             Text(
               data.message,
-              style: const TextStyle(fontStyle: FontStyle.italic),
+              style: const TextStyle(
+                fontStyle: FontStyle.italic,
+                color: Colors.black,
+              ),
             ),
           ],
         ),
