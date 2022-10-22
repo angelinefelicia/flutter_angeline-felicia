@@ -1,5 +1,3 @@
-import 'package:alta_weeklytask3_praktikum/screen/contactus_screen.dart';
-import 'package:alta_weeklytask3_praktikum/screen/datauser_screen.dart';
 import 'package:alta_weeklytask3_praktikum/screen/home_screen.dart';
 import 'package:alta_weeklytask3_praktikum/screen/view_model/contactus_view_model.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +25,7 @@ class MyApp extends StatelessWidget {
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: '[ANGEL] Weekly Task 3',
-        home: ContactusScreen(),
+        home: HomeScreen(),
       ),
     );
   }
